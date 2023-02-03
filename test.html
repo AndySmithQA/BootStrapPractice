@@ -29,6 +29,7 @@
 
         .blur1{
             font-family: 'Dancing Script', cursive;
+            filter: blur(10px);
         }
         .blur2{
             font-family: 'Lobster', cursive;
@@ -40,21 +41,18 @@
 <div class="container">
     <div class="row">
         <div class="col-md-3 text-center">
-            <div class="blur1">
-                <img src="media/ff.png" width="100">
+                <img src="media/ff.png" width="100" onmouseover="unblur(this)" onmouseout="unblur(this)">
                 Some Text
-            </div>
-            <div class="blur2">
-                <img src="media/ff.png" width="100">
+            
+                <img class="blur1" src="media/ff.png" width="100" onmouseover="unblur(this)" onmouseout="unblur(this)">
                 Some Text
-            </div>
-            <div class="blur3">
-                <img src="media/ff.png" width="100">Some Text
-            </div> 
+        
+                <img class="blur1" src="media/ff.png" width="100" onmouseover="unblur(this)" onmouseout="unblur(this)">Some Text
+           
          </div>
          <div class="col-md-3 text-center">
             <div class="blur4">
-                <img src="media/ff.png" width="100">Some Text
+                <img src="media/ff.png" width="100" >Some Text
             </div>
             <div class="blur5">
                 <img src="media/ff.png" width="100">Some Text
@@ -86,6 +84,12 @@
             </div> 
          </div>
     </div>
-</div>      
+</div>    
+<script>
+    function unblur(ele){
+        ele.classList.toggle("blur1")
+    }
+ 
+</script>  
 </body>
 </html>
